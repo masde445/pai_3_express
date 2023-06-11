@@ -12,6 +12,8 @@ var helloRouter = require('./routes/hello'); // nasz router
 
 var helloNatalia = require('./routes/hello/natalia');
 
+var helloMichal = require('./routes/hello/:name');
+
 // ...
 
 var indexRouter = require('./routes/index');
@@ -38,6 +40,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/hello', helloRouter); // mapowanie sciezki na router
 app.use('/hello/natalia', helloNatalia);
+app.use('/hello/michal', helloMichal)
 
 // ...
 
